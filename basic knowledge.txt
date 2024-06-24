@@ -1,0 +1,7 @@
+var myName string = "James"
+	const myNames string = "Osas"
+	myNamme := "Stan"
+
+	fmt.Println(myName)
+	fmt.Println(myNames)
+	fmt.Println(myNamme)
