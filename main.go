@@ -19,8 +19,9 @@ func main(){
 
 	todos := []Todo{}
 
-	app.Get("/", func (c *fiber.Ctx) error  {
-		return c.Status(200).JSON(fiber.Map{"msg": "Hello World"})
+	//Get all todos
+	app.Get("/api/todos", func (c *fiber.Ctx) error  {
+		return c.Status(200).JSON(todos)
 	})
 
 	//Creating a Todo
