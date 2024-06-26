@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
@@ -38,6 +37,7 @@ func main(){
 		log.Fatal(err)
 	}
 
+	// Closing database connection'
 	defer client.Disconnect(context.Background())
 
 	err = client.Ping(context.Background(),nil)
@@ -45,7 +45,7 @@ func main(){
 		log.Fatal(err)
 	}
 
-	fmt.Println("Connected to MongoDB Atlas")
+	fmt.Println("Connected to MongoDB Atlas.")
 
 	collection = client.Database("golang_db").Collection("todos")
 
