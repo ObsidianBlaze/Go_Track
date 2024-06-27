@@ -1,5 +1,5 @@
 # Go_Track
-A simple TODO app using
+A simple TODO app using;
 ## Database
 Mongo DB
 ## Frontend
